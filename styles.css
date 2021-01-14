@@ -1,0 +1,22 @@
+:root {
+    --primary: rgb(167, 186, 240);
+    --secondary: rgb(116, 116, 211);
+    --text: rgb(49, 38, 38);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--primary);
+    color: var(--text);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.flexbox-container {
+    background-color: var(--secondary);
+    margin: 3%;
+}
