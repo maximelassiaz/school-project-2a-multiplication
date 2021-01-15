@@ -19,4 +19,14 @@ body {
 .flexbox-container {
     background-color: var(--secondary);
     margin: 3%;
+    width: 80%;
+}
+
+.table {
+    background-color: var(--primary);
+}
+
+table {
+    border: 1px solid black;
+    background-color: var(--primary);
 }

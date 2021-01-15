@@ -9,7 +9,7 @@
 <body>
     <?php
         function generateTable($num) {
-            echo "<table>";
+            echo "<table class=\"table\">";
             echo "<tr><th>Multiplication table of $num</th></tr>";
             for($i=0; $i<11; $i++) {
                 $multiply = $i * $num;
@@ -88,7 +88,23 @@
     </div>
 
     <div class="flexbox-container table-quizz">
-                  
+        <h2>Let's practice multiplication !</h2>
+        <form action="/school-project-2a/randommultiplication.php" method="POST">
+            <label for="response">
+                What's the result of :
+                <?php 
+                    $array1 = [1,2,3,4,5,6,7,8,9,10];
+                    $array2 = [1,2,3,4,5,6,7,8,9,10];
+                    $random1 = array_rand($array1);
+                    $random2 = array_rand($array2);
+                    $answer = $random1 * $random2;
+                    echo "$random1 &#10005 $random2"
+                ?>
+            </label>
+            <input type="number" name="response" id="response" required>
+            <input type="hidden" name="answer" value="<?php echo $answer ?>;">
+            <button type="submit">Submit</button>
+        </form>         
     </div>
     
 
